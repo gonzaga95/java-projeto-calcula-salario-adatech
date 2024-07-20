@@ -31,4 +31,6 @@ Calcule os descontos e o salário líquido com base nas tabelas abaixo:
 | Acima de 4.664,68 | 27,50% |
 |--|--|
 
+**Obs. O projeto não levou em conta a progressividade dos descontos de INSS e IRPF.**
+
 Entregue por **Carlos E. Gonzaga** | [Linkedin](https://www.linkedin.com/in/carlosegonzaga/)
