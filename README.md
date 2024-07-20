@@ -31,6 +31,10 @@ Calcule os descontos e o salário líquido com base nas tabelas abaixo:
 | Acima de 4.664,68 | 27,50% |
 |--|--|
 
-**Obs. O projeto não levou em conta a progressividade dos descontos de INSS e IRPF.**
+**Obs. O projeto entregue não levou em conta a progressividade dos descontos de INSS e IRPF.**
+
+**Update:**
+
+Após a entrega, apenas para fins didáticos, o código foi refatorado em um novo pacote para testar a aplicação da progressividade dos descontos, aproximando o projeto do cálculo "na vida real" com os valores de 2022.
 
 Entregue por **Carlos E. Gonzaga** | [Linkedin](https://www.linkedin.com/in/carlosegonzaga/)
