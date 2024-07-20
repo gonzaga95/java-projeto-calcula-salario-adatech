@@ -23,8 +23,8 @@ public class CalculoInss {
                     + ((faixaDois - faixaUm) * 0.09d)
                     + (faixaUm * 0.75d);
         } else {
-            double recorteTributavel = salarioBruto - faixaQuatro;
-            descontoInss = ((recorteTributavel - faixaTres) * 0.14d)
+            double recorteNaoTributavel = salarioBruto - faixaQuatro;
+            descontoInss = ((salarioBruto - faixaTres - recorteNaoTributavel) * 0.14d)
                     + ((faixaTres - faixaDois) * 0.12d)
                     + ((faixaDois - faixaUm) * 0.09d)
                     + (faixaUm * 0.75d);
