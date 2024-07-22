@@ -46,13 +46,13 @@ public class Principal {
         return salarioLiquido;
     }
 
-    public static String toString (double salarioBruto,
-                                   double descontoInss,
-                                   double descontoIrpf,
-                                   double salarioLiquido) {
+    public static String oldToString(double salarioBruto,
+                                     double descontoInss,
+                                     double descontoIrpf,
+                                     double salarioLiquido) {
         String salarioBrutoFormat = String.format("%.2f", salarioBruto);
         String descontoInssReal = String.format("%.2f", (salarioBruto * descontoInss));
-        String descontoIrpfReal = String.format("%.2f", (descontoIrpf*100));
+        String descontoIrpfReal = String.format("%.2f", (descontoIrpf*(salarioBruto - (salarioBruto * descontoInss))));
         String salarioLiquidoFormat = String.format("%.2f", salarioLiquido);
         return "Salário bruto: R$ " + salarioBrutoFormat + "\n" +
                 "Desconto de " + (descontoInss*100) + "% " +
@@ -78,7 +78,7 @@ public class Principal {
         descontoInss = calculaDescontoInss(salarioInserido);
         descontoIrpf = calculaDescontoIrpf(salarioInserido, descontoInss);
         salarioLiquido = calculaSalarioLiquido(salarioInserido, descontoInss, descontoIrpf);
-        System.out.println(toString(salarioInserido, descontoInss, descontoIrpf, salarioLiquido));
+        System.out.println(oldToString(salarioInserido, descontoInss, descontoIrpf, salarioLiquido));
         System.out.println("----------------------------");
 
         System.out.println("Insira o segundo salário bruto: ");
@@ -87,7 +87,7 @@ public class Principal {
         descontoInss = calculaDescontoInss(salarioInserido);
         descontoIrpf = calculaDescontoIrpf(salarioInserido, descontoInss);
         salarioLiquido = calculaSalarioLiquido(salarioInserido, descontoInss, descontoIrpf);
-        System.out.println(toString(salarioInserido, descontoInss, descontoIrpf, salarioLiquido));
+        System.out.println(oldToString(salarioInserido, descontoInss, descontoIrpf, salarioLiquido));
         System.out.println("----------------------------");
 
         System.out.println("Insira o terceiro salário bruto: ");
@@ -96,7 +96,7 @@ public class Principal {
         descontoInss = calculaDescontoInss(salarioInserido);
         descontoIrpf = calculaDescontoIrpf(salarioInserido, descontoInss);
         salarioLiquido = calculaSalarioLiquido(salarioInserido, descontoInss, descontoIrpf);
-        System.out.println(toString(salarioInserido, descontoInss, descontoIrpf, salarioLiquido));
+        System.out.println(oldToString(salarioInserido, descontoInss, descontoIrpf, salarioLiquido));
         System.out.println("----------------------------");
 
         System.out.println("Insira o quarto salário bruto: ");
@@ -105,7 +105,7 @@ public class Principal {
         descontoInss = calculaDescontoInss(salarioInserido);
         descontoIrpf = calculaDescontoIrpf(salarioInserido, descontoInss);
         salarioLiquido = calculaSalarioLiquido(salarioInserido, descontoInss, descontoIrpf);
-        System.out.println(toString(salarioInserido, descontoInss, descontoIrpf, salarioLiquido));
+        System.out.println(oldToString(salarioInserido, descontoInss, descontoIrpf, salarioLiquido));
         System.out.println("----------------------------");
 
         System.out.println("Insira o quinto salário bruto: ");
@@ -114,7 +114,7 @@ public class Principal {
         descontoInss = calculaDescontoInss(salarioInserido);
         descontoIrpf = calculaDescontoIrpf(salarioInserido, descontoInss);
         salarioLiquido = calculaSalarioLiquido(salarioInserido, descontoInss, descontoIrpf);
-        System.out.println(toString(salarioInserido, descontoInss, descontoIrpf, salarioLiquido));
+        System.out.println(oldToString(salarioInserido, descontoInss, descontoIrpf, salarioLiquido));
         System.out.println("----------------------------");
     }
 }
