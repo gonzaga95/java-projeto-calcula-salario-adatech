@@ -10,24 +10,29 @@ public class CalculoInss {
         double descontoInss;
         if (salarioBruto <= faixaUm) {
             descontoInss = salarioBruto * 0.075d;
+            System.out.println("entrou1");
         } else if (salarioBruto <= faixaDois) {
             descontoInss = ((salarioBruto - faixaUm) * 0.09d)
-                    + (faixaUm * 0.75d);
+                    + (faixaUm * 0.075d);
+            System.out.println("entrou2");
         } else if (salarioBruto <= faixaTres) {
             descontoInss = ((salarioBruto - faixaDois) * 0.12d)
                     + ((faixaDois - faixaUm) * 0.09d)
-                    + (faixaUm * 0.75d);
+                    + (faixaUm * 0.075d);
+            System.out.println("entrou3");
         } else if (salarioBruto <= faixaQuatro) {
             descontoInss = ((salarioBruto - faixaTres) * 0.14d)
                     + ((faixaTres - faixaDois) * 0.12d)
                     + ((faixaDois - faixaUm) * 0.09d)
-                    + (faixaUm * 0.75d);
+                    + (faixaUm * 0.075d);
+            System.out.println("entrou4");
         } else {
             double recorteNaoTributavel = salarioBruto - faixaQuatro;
             descontoInss = ((salarioBruto - faixaTres - recorteNaoTributavel) * 0.14d)
                     + ((faixaTres - faixaDois) * 0.12d)
                     + ((faixaDois - faixaUm) * 0.09d)
-                    + (faixaUm * 0.75d);
+                    + (faixaUm * 0.075d);
+            System.out.println("entrou5");
         }
 
         return descontoInss;

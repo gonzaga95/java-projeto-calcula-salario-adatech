@@ -17,9 +17,13 @@ public class Menu {
 
         double salarioInserido;
 
+            System.out.println("Insira o salário bruto: ");
         while (true) {
-            System.out.println("Digite o salário bruto: ");
+
             salarioInserido = scanner.nextDouble();
+            if (salarioInserido == 0) {
+                break;
+            }
 
             descontoInss = calculoInss.retornaDescontosInss(salarioInserido);
             descontoIrpf = calculoIrpf.retornaDescontosIrpf(salarioInserido, descontoInss);
@@ -33,12 +37,9 @@ public class Menu {
                             salarioLiquido));
 
             System.out.println("----------------------------");
-            System.out.println("Para continuar, pressione ENTER; para sair, digite 'SAIR'");
-            var opcao = scanner.nextLine();
-            if (opcao.equalsIgnoreCase("sair")) {
-                break;
-            }
+            System.out.println("Insira outro salário bruto para calcular ou [0] para encerrar");
         }
 
+        scanner.close();
     }
 }
