@@ -1,10 +1,10 @@
 package Refatorado;
 
 public class CalculoInss {
-    private static double faixaUm = 1212.0d;
-    private static double faixaDois = 2427.35d;
-    private static double faixaTres = 3641.03d;
-    private static double faixaQuatro = 7087.22d;
+    private final double faixaUm = 1212.0d;
+    private final double faixaDois = 2427.35d;
+    private final double faixaTres = 3641.03d;
+    private final double faixaQuatro = 7087.22d;
 
     public double retornaDescontosInss(double salarioBruto) {
         double descontoInss;
