@@ -37,4 +37,8 @@ Calcule os descontos e o salário líquido com base nas tabelas abaixo:
 
 Após a entrega, apenas para fins didáticos, o código foi refatorado em um novo pacote para testar a aplicação da progressividade dos descontos, aproximando o projeto do cálculo "na vida real" com os valores de 2022.
 
+[.../src/Principal/](https://github.com/gonzaga95/java-projeto-calcula-salario-adatech/tree/main/src/Principal)
+
+[.../src/Refatorado/](https://github.com/gonzaga95/java-projeto-calcula-salario-adatech/tree/main/src/Refatorado)
+
 Entregue por **Carlos E. Gonzaga** | [Linkedin](https://www.linkedin.com/in/carlosegonzaga/)
